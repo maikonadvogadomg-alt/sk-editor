@@ -1,0 +1,60 @@
+directories:
+  output: dist-electron
+  buildResources: build-resources
+appId: br.adv.skjuridico
+productName: SK Jurídico IA
+copyright: Copyright © 2026 SK Jurídico
+icon: ../../artifacts/assistente-juridico/public/icon-512.png
+extraResources:
+  - from: ../../artifacts/api-server/dist
+    to: api-server/dist
+    filter:
+      - '**/*'
+  - from: ../../artifacts/assistente-juridico/dist
+    to: frontend/dist
+    filter:
+      - '**/*'
+  - from: ../../lib/db
+    to: lib/db
+    filter:
+      - src/**/*
+      - package.json
+win:
+  target:
+    - target: nsis
+      arch:
+        - x64
+    - target: portable
+      arch:
+        - x64
+  icon: ../../artifacts/assistente-juridico/public/icon-512.png
+mac:
+  target:
+    - dmg
+    - zip
+  category: public.app-category.productivity
+  icon: ../../artifacts/assistente-juridico/public/icon-512.png
+  hardenedRuntime: true
+  gatekeeperAssess: false
+linux:
+  target:
+    - AppImage
+    - deb
+    - snap
+  category: Office
+  icon: ../../artifacts/assistente-juridico/public/icon-512.png
+  desktop:
+    Name: SK Jurídico IA
+    Comment: Assistente jurídico com IA
+    Categories: Office;Utility
+nsis:
+  oneClick: false
+  allowToChangeInstallationDirectory: true
+  installerIcon: ../../artifacts/assistente-juridico/public/icon-512.png
+  installerHeaderIcon: ../../artifacts/assistente-juridico/public/icon-512.png
+  createDesktopShortcut: true
+  createStartMenuShortcut: true
+  shortcutName: SK Jurídico IA
+  include: build-resources/installer.nsh
+files: []
+electronVersion: 33.4.11
