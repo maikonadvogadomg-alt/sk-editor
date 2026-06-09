@@ -1,0 +1,38 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "KwjDPk_2PBKeS9PmrbPcC"
+uri = "file://MANUAL-CORRECOES-ASSISTENTE-JURIDICO.md"
+type = "text"
+title = "Manual de Instrucoes para Gemini — Assistente Juridico"
+
+[[outputs]]
+id = "765riTaBpCMZ0VE6rd1DG"
+uri = "file://MANUAL_BACKUP.md"
+type = "text"
+title = "Manual de Backup - Como usar seus apps na Vercel"
+
+[[outputs]]
+id = "fa_rgl38AY_tgC6ZXz8Gk"
+uri = "file://DOC_PROJETO.md"
+type = "text"
+title = "Documentação do CodeLens"
+
+[[outputs]]
+id = "g8kBRtRo7zwyUa-dNhg8q"
+uri = "file://INSTALACAO_LOCAL.md"
+type = "text"
+title = "Como Rodar o CodeLens no Computador"
+
+[[outputs]]
+id = "ODRS4kX1xJupeS6ws-uDY"
+uri = "file://vercel-assistente-juridico/DOC_PROJETO.md"
+type = "text"
+title = "Documentação do Assistente Jurídico"
+
+[[outputs]]
+id = "KMxx0bB2jhHKT_Jofep0z"
+uri = "file://vercel-assistente-juridico/INSTALACAO_LOCAL.md"
+type = "text"
+title = "Como Rodar o Assistente Jurídico no Computador"
