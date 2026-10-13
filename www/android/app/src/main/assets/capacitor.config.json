@@ -1,0 +1,8 @@
+{
+	"appId": "com.app.codelenslocal",
+	"appName": "codelens-local",
+	"webDir": "dist",
+	"server": {
+		"androidScheme": "https"
+	}
+}
