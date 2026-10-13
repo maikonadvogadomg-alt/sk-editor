@@ -1,0 +1,31 @@
+{
+  "titulo": "codelens-local-desktop (1)",
+  "arquivo": "index.html",
+  "itens": [
+    {
+      "path": "www/android/app/src/main/assets/public/index.html",
+      "nome": "CodeLens",
+      "desc": "",
+      "on": true,
+      "icone": "www/android/app/src/main/assets/public/assets/icon-CTxW8nPR.svg"
+    },
+    {
+      "path": "www/dist/index.html",
+      "nome": "CodeLens",
+      "desc": "",
+      "on": true,
+      "icone": "www/dist/icons/icon.svg"
+    },
+    {
+      "path": "www/index.html",
+      "nome": "CodeLens",
+      "desc": "",
+      "on": true,
+      "icone": "www/icons/icon.svg"
+    }
+  ],
+  "sub": "",
+  "logo": "",
+  "tema": "escuro",
+  "links": []
+}
