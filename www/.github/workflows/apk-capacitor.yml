@@ -1,0 +1,44 @@
+name: APK (Capacitor)
+# Feita pelo 🏗️ Preparar do Mini SK. Roda sozinha quando você manda para o GitHub,
+# ou em Actions → "APK (Capacitor)" → Run workflow. O APK sai em "Artifacts".
+on:
+  push:
+    branches: [main, master]
+  workflow_dispatch:
+
+jobs:
+  apk:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: 21
+      - name: Instalar as dependências
+        run: npm install --no-audit --no-fund --legacy-peer-deps
+      - name: Montar o site
+        run: npm run build --if-present
+      - name: Criar a parte Android
+        run: |
+          [ -d android ] || npx cap add android
+          npx cap sync android
+      - name: Autorizações do Android (internet, microfone…)
+        run: |
+          M=android/app/src/main/AndroidManifest.xml
+          for P in INTERNET ACCESS_NETWORK_STATE RECORD_AUDIO MODIFY_AUDIO_SETTINGS; do
+            grep -qw "android.permission.$P" $M || sed -i "s#</manifest>#    <uses-permission android:name='android.permission.$P' />\n</manifest>#" $M
+          done
+          grep uses-permission $M
+      - name: Fazer o APK
+        run: |
+          cd android
+          chmod +x gradlew
+          ./gradlew assembleDebug --no-daemon
+      - uses: actions/upload-artifact@v4
+        with:
+          name: app-debug-apk
+          path: android/app/build/outputs/apk/debug/*.apk
