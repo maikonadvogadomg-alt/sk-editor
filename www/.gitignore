@@ -1,0 +1,7 @@
+node_modules/
+dist/
+dados/
+.env
+.env.*
+*.log
+dist-electron/
