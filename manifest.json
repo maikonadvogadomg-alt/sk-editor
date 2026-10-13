@@ -1,14 +1,14 @@
 {
-  "name": "codelens-local-desktop (1)",
+  "name": "codelens-local",
   "short_name": "codelens-loc",
   "description": "codelens-local-desktop (1)",
-  "id": "./app-codelens-local-desktop-1",
+  "id": "./app-codelens-local",
   "start_url": "./",
   "scope": "./",
   "display": "standalone",
   "orientation": "any",
-  "background_color": "#0f1420",
-  "theme_color": "#0f1420",
+  "background_color": "#0f172a",
+  "theme_color": "#0f172a",
   "lang": "pt-BR",
   "dir": "ltr",
   "icons": [

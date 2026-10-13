@@ -5,7 +5,7 @@ const { app, BrowserWindow, protocol, net, shell, session } = require('electron'
 const path = require('path');
 const fs = require('fs');
 const { pathToFileURL } = require('url');
-const PASTA = path.join(__dirname, '..', "dist");
+const PASTA = path.join(__dirname, '..', ".");
 
 protocol.registerSchemesAsPrivileged([{ scheme: 'app', privileges: { standard: true, secure: true, supportFetchAPI: true, corsEnabled: true, stream: true } }]);
 
